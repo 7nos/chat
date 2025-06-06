@@ -1,0 +1,29 @@
+Embedded Systems Basics
+
+An embedded system is a computer system designed to perform specific tasks within a larger system. These systems are found in many devices we use daily.
+
+Key Components:
+1. Microcontroller - The brain of the system
+2. Memory - Stores program and data
+3. Input/Output - Connects to sensors and actuators
+4. Communication - Allows data exchange with other devices
+
+Common Applications:
+- Smartphones
+- Cars
+- Medical devices
+- Home appliances
+- Industrial machines
+- IoT devices
+
+Communication Protocols:
+- UART for serial communication
+- SPI for high-speed data transfer
+- I2C for connecting multiple devices
+- CAN for automotive systems
+
+Development Tools:
+- IDEs for coding
+- Debuggers for testing
+- Oscilloscopes for signal analysis
+- Logic analyzers for protocol debugging 

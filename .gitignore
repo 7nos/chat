@@ -1,0 +1,37 @@
+# Node and Python environments
+node_modules/
+venv/
+__pycache__/
+
+# Build/cache/backup folders
+*.log
+.cache/
+backup_assets/
+*.bak
+
+# TypeScript compiler output and tools
+*.tsbuildinfo
+
+# Large binaries and libraries
+*.dll
+*.lib
+*.so
+*.pyd
+*.pack
+*.npy
+*.npy.gz
+
+# Podcast-generated audio or other heavy static
+server/podcast_service/static/generated_audio/
+
+# Python packages that shouldn't be committed
+*.whl
+*.egg-info/
+
+# Environment files
+.env
+*.env
+
+# VSCode or JetBrains IDE configs
+.vscode/
+.idea/

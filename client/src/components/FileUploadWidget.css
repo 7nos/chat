@@ -1,0 +1,96 @@
+/* client/src/components/FileUploadWidget.css */
+
+.file-upload-widget {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3); /* Use theme variable */
+  padding: var(--spacing-4); /* Use theme variable */
+  box-sizing: border-box;
+  background-color: var(--dark-bg-secondary); /* Use theme variable */
+  border-bottom: 1px solid var(--dark-border-color); /* Use theme variable */
+}
+
+.file-upload-widget h4 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-3); /* Use theme variable */
+  color: var(--dark-text-primary); /* Use theme variable */
+  font-size: var(--typography-fontSize-base); /* Use theme variable */
+  font-weight: var(--typography-fontWeight-semibold); /* Use theme variable */
+}
+
+.select-file-btn,
+.upload-btn {
+  width: 100%;
+  padding: var(--spacing-2) var(--spacing-3); /* Use theme variables */
+  border: 1px solid var(--dark-border-color); /* Use theme variable */
+  border-radius: var(--borderRadius-md); /* Use theme variable */
+  cursor: pointer;
+  font-size: var(--typography-fontSize-sm); /* Use theme variable */
+  font-weight: var(--typography-fontWeight-medium); /* Use theme variable */
+  transition: all var(--transitions-fast); /* Use theme variable */
+  background-color: var(--dark-bg-input); /* Use theme variable */
+  color: var(--dark-text-primary); /* Use theme variable */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.select-file-btn:hover:not(:disabled),
+.upload-btn:hover:not(:disabled) {
+  background-color: var(--neutral-800); /* Use theme variable */
+  border-color: var(--neutral-700); /* Use theme variable */
+}
+
+.select-file-btn:disabled,
+.upload-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.upload-btn {
+  background-color: var(--primary-500); /* Use theme variable */
+  border-color: var(--primary-500); /* Use theme variable */
+  color: var(--neutral-50); /* Use theme variable */
+}
+
+.upload-btn:hover:not(:disabled) {
+  background-color: var(--primary-600); /* Use theme variable */
+  border-color: var(--primary-600); /* Use theme variable */
+}
+
+.upload-btn:disabled {
+  background-color: var(--dark-bg-input); /* Use theme variable */
+  border-color: var(--dark-border-color); /* Use theme variable */
+  color: var(--dark-text-secondary); /* Use theme variable */
+  opacity: 0.7;
+}
+
+.status-message {
+  font-size: var(--typography-fontSize-xs); /* Use theme variable */
+  color: var(--dark-text-secondary); /* Use theme variable */
+  padding: var(--spacing-2) var(--spacing-3); /* Use theme variables */
+  background-color: var(--dark-bg-input); /* Use theme variable */
+  border: 1px solid var(--dark-border-color); /* Use theme variable */
+  border-radius: var(--borderRadius-sm); /* Use theme variable */
+  text-align: center;
+  min-height: 1.6em;
+  line-height: 1.4;
+  word-break: break-word;
+  transition: all var(--transitions-fast); /* Use theme variable */
+}
+
+.status-message.uploading {
+  color: var(--primary-400); /* Use theme variable */
+  border-color: var(--primary-500); /* Use theme variable */
+}
+
+.status-message.success {
+  color: var(--success-500); /* Use theme variable */
+  border-color: var(--success-500); /* Use theme variable */
+  background-color: var(--success-500/10); /* Use direct color/opacity */
+}
+
+.status-message.error {
+  color: var(--error-500); /* Use theme variable */
+  border-color: var(--error-500); /* Use theme variable */
+  background-color: var(--error-500/10); /* Use direct color/opacity */
+} 

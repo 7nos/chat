@@ -1,0 +1,74 @@
+.mindmap-container {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.mindmap-container svg {
+  width: 100%;
+  height: 100%;
+}
+
+.mindmap-container .rd3t-link {
+  stroke: #4a90e2;
+  stroke-width: 2;
+}
+
+.mindmap-container .rd3t-node {
+  cursor: pointer;
+}
+
+.mindmap-container .rd3t-node circle {
+  transition: all 0.3s ease;
+}
+
+.mindmap-container .rd3t-node:hover circle {
+  r: 18;
+  filter: brightness(1.1);
+}
+
+.mindmap-container .rd3t-node text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.mindmap-container .rd3t-node:hover text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .mindmap-container {
+    background-color: #1a1a1a;
+  }
+
+  .mindmap-container .rd3t-link {
+    stroke: #6aa8ff;
+  }
+
+  .mindmap-container .rd3t-node text {
+    fill: #ffffff;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .mindmap-container {
+    min-height: 300px;
+  }
+
+  .mindmap-container .rd3t-node text {
+    font-size: 10px;
+  }
+
+  .mindmap-container .rd3t-node:hover text {
+    font-size: 12px;
+  }
+} 

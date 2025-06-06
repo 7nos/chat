@@ -1,0 +1,7 @@
+# This is a test Python code in a text file
+def hello():
+    print("Hello from Python!")
+    return "Success"
+
+if __name__ == "__main__":
+    hello() 

@@ -1,0 +1,6 @@
+flask==2.0.1
+werkzeug==2.0.1
+PyPDF2==3.0.1
+python-docx==0.8.11
+pyttsx3==2.90
+pydub==0.25.1 

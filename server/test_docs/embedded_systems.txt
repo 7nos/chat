@@ -1,0 +1,43 @@
+Embedded Systems Fundamentals
+
+Embedded systems are specialized computing systems designed to perform specific tasks within larger mechanical or electrical systems. They are typically resource-constrained and require real-time operation.
+
+Key Components:
+1. Microcontroller/Microprocessor
+   - CPU core (e.g., ARM Cortex-M)
+   - Memory (RAM, ROM, Flash)
+   - Peripherals (GPIO, Timers, ADC, DAC)
+   - Communication interfaces
+
+2. Real-Time Operating Systems (RTOS)
+   - Task scheduling
+   - Interrupt handling
+   - Memory management
+   - Device drivers
+
+3. Communication Protocols
+   - UART (Universal Asynchronous Receiver-Transmitter)
+   - SPI (Serial Peripheral Interface)
+   - I2C (Inter-Integrated Circuit)
+   - CAN (Controller Area Network)
+
+4. Development Tools
+   - Integrated Development Environments (IDEs)
+   - Debuggers and programmers
+   - Oscilloscopes and logic analyzers
+   - Protocol analyzers
+
+5. Design Considerations
+   - Power consumption
+   - Real-time constraints
+   - Reliability and safety
+   - Cost optimization
+   - Size and weight constraints
+
+Common Applications:
+- Automotive systems
+- Medical devices
+- Industrial automation
+- Consumer electronics
+- Internet of Things (IoT) devices
+- Aerospace systems 

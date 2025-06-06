@@ -1,0 +1,200 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* Import theme variables */
+@import './theme.css';
+
+/* Reset & Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--typography-fontFamily-sans);
+  font-size: var(--typography-fontSize-base);
+  line-height: var(--typography-lineHeight-normal);
+  color: var(--dark-text-primary);
+  background-color: var(--dark-bg-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--typography-fontWeight-semibold);
+  line-height: var(--typography-lineHeight-tight);
+  color: var(--dark-text-primary);
+}
+
+h1 { font-size: var(--typography-fontSize-4xl); }
+h2 { font-size: var(--typography-fontSize-3xl); }
+h3 { font-size: var(--typography-fontSize-2xl); }
+h4 { font-size: var(--typography-fontSize-xl); }
+h5 { font-size: var(--typography-fontSize-lg); }
+h6 { font-size: var(--typography-fontSize-base); }
+
+p {
+  margin-bottom: var(--spacing-4);
+}
+
+/* Code & Pre */
+code, pre {
+  font-family: var(--typography-fontFamily-mono);
+  font-size: var(--typography-fontSize-sm);
+}
+
+code {
+  background-color: var(--dark-bg-input);
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--borderRadius-sm);
+  color: var(--dark-text-secondary);
+}
+
+pre {
+  background-color: var(--dark-bg-main);
+  padding: var(--spacing-4);
+  border-radius: var(--borderRadius-md);
+  overflow-x: auto;
+  border: 1px solid var(--dark-border-color);
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  color: inherit;
+}
+
+/* Links */
+a {
+  color: var(--primary-400);
+  text-decoration: none;
+  transition: color var(--transitions-fast);
+}
+
+a:hover {
+  color: var(--primary-300);
+  text-decoration: underline;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+/* Form Elements */
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: var(--dark-text-primary);
+  background-color: var(--dark-bg-input);
+  border: 1px solid var(--dark-border-color);
+  border-radius: var(--borderRadius-md);
+  padding: var(--spacing-3) var(--spacing-4);
+  transition: border-color var(--transitions-fast), box-shadow var(--transitions-fast);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 2px var(--primary-500/20);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neutral-600);
+  border-radius: var(--borderRadius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neutral-500);
+}
+
+/* Focus Styles */
+:focus-visible {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+}
+
+/* Utility Classes */
+.text-gradient {
+  background: linear-gradient(to right, var(--primary-400), var(--primary-600));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn var(--transitions-normal);
+}
+
+.slide-up {
+  animation: slideUp var(--transitions-normal);
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  .no-print {
+    display: none;
+  }
+} 
