@@ -1,0 +1,122 @@
+/* client/src/components/AuthPage.css */
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--dark-bg-main); /* Use theme variable */
+}
+
+.auth-box {
+    background: var(--dark-bg-secondary); /* Use theme variable */
+    padding: var(--spacing-8);
+    border-radius: var(--borderRadius-lg);
+    box-shadow: var(--shadow-xl); /* Use theme variable */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid var(--dark-border-color); /* Add border from theme */
+}
+
+.auth-box h2 {
+    margin-bottom: var(--spacing-6);
+    color: var(--dark-text-primary); /* Use theme variable */
+    font-size: var(--typography-fontSize-2xl); /* Use theme variable */
+    font-weight: var(--typography-fontWeight-semibold); /* Use theme variable */
+}
+
+.input-group {
+    margin-bottom: var(--spacing-5);
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: var(--spacing-2);
+    color: var(--dark-text-secondary); /* Use theme variable */
+    font-weight: var(--typography-fontWeight-medium); /* Use theme variable */
+    font-size: var(--typography-fontSize-sm); /* Use theme variable */
+}
+
+.input-group input {
+    width: 100%;
+    padding: var(--spacing-3) var(--spacing-4);
+    border: 1px solid var(--dark-border-color); /* Use theme variable */
+    border-radius: var(--borderRadius-md); /* Use theme variable */
+    box-sizing: border-box;
+    font-size: var(--typography-fontSize-base); /* Use theme variable */
+    background-color: var(--dark-bg-input); /* Use theme variable */
+    color: var(--dark-text-primary); /* Use theme variable */
+    transition: border-color var(--transitions-fast), box-shadow var(--transitions-fast); /* Use theme variables */
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-500); /* Use theme variable */
+    box-shadow: 0 0 0 2px var(--primary-500/20); /* Use direct color/opacity */
+}
+
+.input-group input:disabled {
+    background-color: var(--dark-bg-tertiary); /* Use theme variable */
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.auth-button {
+    width: 100%;
+    padding: var(--spacing-3);
+    background-color: var(--primary-500); /* Use theme variable */
+    color: var(--neutral-50); /* Use theme variable */
+    border: none;
+    border-radius: var(--borderRadius-md); /* Use theme variable */
+    font-size: var(--typography-fontSize-base); /* Use theme variable */
+    cursor: pointer;
+    transition: background-color var(--transitions-fast), transform var(--transitions-fast), box-shadow var(--transitions-fast); /* Use theme variables */
+    margin-top: var(--spacing-4);
+}
+
+.auth-button:hover:not(:disabled) {
+    background-color: var(--primary-600); /* Use theme variable */
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md); /* Use theme variable */
+}
+
+.auth-button:disabled {
+    background-color: var(--dark-bg-input); /* Use theme variable */
+    color: var(--dark-text-secondary); /* Use theme variable */
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    color: var(--primary-400); /* Use theme variable */
+    cursor: pointer;
+    margin-top: var(--spacing-4);
+    font-size: var(--typography-fontSize-sm); /* Use theme variable */
+    transition: color var(--transitions-fast); /* Use theme variable */
+}
+
+.toggle-button:hover:not(:disabled) {
+    text-decoration: underline;
+    color: var(--primary-300); /* Use theme variable */
+}
+
+.toggle-button:disabled {
+    color: var(--dark-text-tertiary); /* Use theme variable */
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.error-message {
+    color: var(--error-500); /* Use theme variable */
+    margin-top: var(--spacing-4);
+    margin-bottom: 0;
+    font-size: var(--typography-fontSize-sm); /* Use theme variable */
+    background-color: var(--error-500/10); /* Use direct color/opacity */
+    border: 1px solid var(--error-500); /* Use theme variable */
+    padding: var(--spacing-2) var(--spacing-3);
+    border-radius: var(--borderRadius-md); /* Use theme variable */
+} 

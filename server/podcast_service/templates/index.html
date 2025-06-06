@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document to Podcast Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .upload-form {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .file-input {
+            margin: 10px 0;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .error {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+        .success {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+        .audio-player {
+            margin-top: 20px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Document to Podcast Converter</h1>
+        
+        <div class="upload-form">
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <div class="file-input">
+                    <input type="file" name="file" accept=".txt,.pdf,.docx" required>
+                </div>
+                <button type="submit" class="submit-btn">Convert to Podcast</button>
+            </form>
+        </div>
+
+        {% if error %}
+        <div class="status error">
+            {{ error }}
+        </div>
+        {% endif %}
+
+        {% if audio_url %}
+        <div class="status success">
+            <p>Conversion complete! Listen to your podcast:</p>
+            <audio controls class="audio-player">
+                <source src="{{ audio_url }}" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html> 

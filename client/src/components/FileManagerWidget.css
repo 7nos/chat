@@ -1,0 +1,216 @@
+/* client/src/components/FileManagerWidget.css */
+
+.file-manager-widget {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3); /* Use theme variable */
+  padding: var(--spacing-4); /* Use theme variable */
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--dark-bg-secondary); /* Use theme variable */
+  border-bottom: 1px solid var(--dark-border-color); /* Use theme variable */
+}
+
+.fm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding-right handled by parent widget padding */
+  flex-shrink: 0;
+}
+
+.file-manager-widget h4 {
+  margin: 0;
+  color: var(--dark-text-primary); /* Use theme variable */
+  font-size: var(--typography-fontSize-base); /* Use theme variable */
+  font-weight: var(--typography-fontWeight-semibold); /* Use theme variable */
+}
+
+.fm-refresh-btn {
+  background: none;
+  border: 1px solid var(--dark-border-color); /* Use theme variable */
+  color: var(--dark-text-secondary); /* Use theme variable */
+  padding: var(--spacing-1) var(--spacing-2); /* Use theme variables */
+  border-radius: var(--borderRadius-sm); /* Use theme variable */
+  cursor: pointer;
+  font-size: var(--typography-fontSize-sm); /* Use theme variable */
+  line-height: 1;
+  transition: all var(--transitions-fast); /* Use theme variable */
+}
+
+.fm-refresh-btn:hover:not(:disabled) {
+  color: var(--dark-text-primary); /* Use theme variable */
+  border-color: var(--neutral-600); /* Use theme variable */
+  background-color: var(--neutral-800); /* Use theme variable */
+}
+
+.fm-refresh-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.fm-error,
+.fm-loading,
+.fm-empty {
+  font-size: var(--typography-fontSize-sm); /* Use theme variable */
+  padding: var(--spacing-2) var(--spacing-3); /* Use theme variables */
+  border-radius: var(--borderRadius-md); /* Use theme variable */
+  text-align: center;
+  margin: var(--spacing-2) 0; /* Use theme variable */
+  flex-shrink: 0;
+}
+
+.fm-error {
+  color: var(--error-500); /* Use theme variable */
+  border: 1px solid var(--error-500); /* Use theme variable */
+  background-color: var(--error-500/10); /* Use direct color/opacity */
+  font-style: normal;
+}
+
+.fm-loading,
+.fm-empty {
+  color: var(--dark-text-secondary); /* Use theme variable */
+  font-style: italic;
+}
+
+.fm-loading-bottom {
+  margin-top: auto;
+  padding: var(--spacing-1); /* Use theme variable */
+}
+
+.fm-file-list-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: var(--spacing-2); /* Use theme variable */
+  margin-right: calc(-1 * var(--spacing-2)); /* Use theme variable */
+  position: relative;
+}
+
+/* Scrollbar styles handled by global.css */
+
+.fm-file-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fm-file-item {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-2) var(--spacing-1); /* Use theme variables */
+  margin-bottom: var(--spacing-1); /* Use theme variable */
+  border-radius: var(--borderRadius-sm); /* Use theme variable */
+  background-color: var(--dark-bg-input); /* Use theme variable */
+  transition: background-color var(--transitions-fast); /* Use theme variable */
+  gap: var(--spacing-2); /* Use theme variable */
+}
+
+.fm-file-item:hover {
+  background-color: var(--neutral-800); /* Use theme variable */
+}
+
+.fm-file-icon {
+  flex-shrink: 0;
+  font-size: var(--typography-fontSize-lg); /* Use theme variable */
+  line-height: 1;
+}
+
+.fm-file-details {
+  flex-grow: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: var(--spacing-8); /* Use theme variable for consistent height */
+}
+
+.fm-file-name {
+  font-size: var(--typography-fontSize-sm); /* Use theme variable */
+  color: var(--dark-text-primary); /* Use theme variable */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fm-file-size {
+  font-size: var(--typography-fontSize-xs); /* Use theme variable */
+  color: var(--dark-text-secondary); /* Use theme variable */
+  margin-top: var(--spacing-1); /* Use theme variable */
+}
+
+.fm-file-actions {
+  display: flex;
+  gap: var(--spacing-1); /* Use theme variable */
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.fm-action-btn {
+  background: none;
+  border: none;
+  color: var(--dark-text-secondary); /* Use theme variable */
+  cursor: pointer;
+  padding: var(--spacing-1); /* Use theme variable */
+  font-size: var(--typography-fontSize-base); /* Use theme variable */
+  line-height: 1;
+  border-radius: var(--borderRadius-sm); /* Use theme variable */
+  transition: all var(--transitions-fast); /* Use theme variable */
+}
+
+.fm-action-btn:hover:not(:disabled) {
+  color: var(--dark-text-primary); /* Use theme variable */
+  background-color: var(--neutral-700); /* Use theme variable */
+}
+
+.fm-action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.fm-delete-btn:hover:not(:disabled) {
+  color: var(--error-500); /* Use theme variable */
+}
+
+.fm-rename-btn:hover:not(:disabled) {
+  color: var(--primary-400); /* Use theme variable */
+}
+
+.fm-view-btn:hover:not(:disabled) {
+  color: var(--info-500); /* Use theme variable */
+}
+
+.fm-download-btn:hover:not(:disabled) {
+  color: var(--success-500); /* Use theme variable */
+}
+
+.fm-save-btn:hover:not(:disabled) {
+  color: var(--success-500); /* Use theme variable */
+}
+
+.fm-cancel-btn:hover:not(:disabled) {
+  color: var(--warning-500); /* Use theme variable */
+}
+
+.fm-rename-section {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1); /* Use theme variable */
+  width: 100%;
+}
+
+.fm-rename-input {
+  flex-grow: 1;
+  padding: var(--spacing-1) var(--spacing-2); /* Use theme variables */
+  background-color: var(--dark-bg-main); /* Use theme variable */
+  color: var(--dark-text-primary); /* Use theme variable */
+  border: 1px solid var(--dark-border-color); /* Use theme variable */
+  border-radius: var(--borderRadius-sm); /* Use theme variable */
+  font-size: var(--typography-fontSize-sm); /* Use theme variable */
+  outline: none;
+  min-width: 50px;
+}
+
+.fm-rename-input:focus {
+  border-color: var(--primary-500); /* Use theme variable */
+} 
